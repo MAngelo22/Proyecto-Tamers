@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronómetro Tabata</title>
-    <link rel="stylesheet" href="Modelo/styles.css">
+    <link rel="stylesheet" href="/Modelo/styles.css">
     <link rel="icon" href="data:,"> <!-- Evita el error de favicon 404 -->
 </head>
 <body>
@@ -35,13 +35,13 @@
     
         <!-- Contenedor para los botones -->
         <div id="buttonContainer">
-            <button id="startBtn">Iniciar</button>
-            <button id="resetBtn">Reiniciar</button>
+            <button id="startBtn" class="btn">Iniciar</button>
+            <button id="resetBtn" class="btn">Reiniciar</button>
         </div>
         
         <!-- Contenedor del video -->
         <div id="videoContainer">
-            <video id="exerciseVideo" width="600" controls>
+            <video id="exerciseVideo" controls>
                 <source id="videoSource" src="Media/Video/brazos.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de videos.
             </video>

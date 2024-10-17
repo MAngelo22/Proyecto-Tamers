@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="../Modelo/styles.css">
 </head>
 <body>
-    <nav>
+    <!-- Navbar lateral -->
+    <div class="sidebar">
+        <h2>Ejercicios</h2>
         <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../Vista/settings.html">Configuración</a></li>
         </ul>
-    </nav>
-    <div id="settings">
+    </div>
+
+    <div id="settings" class="content">
         <h1>Configuración del Cronómetro</h1>
         <label for="workTime">Tiempo de trabajo (segundos):</label>
         <input type="number" id="workTime" value="20" min="1"><br>
@@ -32,9 +35,9 @@
         </select>
         <br>
 
-        <button id="saveSettings">Guardar Configuración</button>
+        <button id="saveSettings" class="btn">Guardar Configuración</button>
     </div>
-    <!-- Corrigiendo la ruta del script -->
+
     <script src="../Controladores/settings.js"></script>
 </body>
 </html>

@@ -1,119 +1,185 @@
-/* Estilos para el navbar lateral */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    min-height: 100vh; /* Para que ocupe todo el alto de la ventana */
+}
+
+/* Navbar lateral */
 .sidebar {
-    height: 100%; /* Altura total de la página */
-    width: 250px; /* Ancho del sidebar */
-    position: fixed; /* Fijo en la pantalla */
+    background-color: #3c3f41;
+    padding: 20px;
+    width: 250px;
+    height: 100vh; /* Altura completa de la ventana */
+    position: fixed; /* Fijo en el lado izquierdo */
     top: 0;
     left: 0;
-    background-color: #111; /* Color de fondo */
-    padding-top: 20px;
-    z-index: 1000; /* Asegura que el sidebar esté encima del contenido */
+    z-index: 1000; /* Para asegurarse de que esté por encima del contenido */
 }
 
 .sidebar h2 {
-    color: white;
-    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
 }
 
 .sidebar ul {
-    list-style-type: none; /* Sin viñetas */
+    list-style: none;
     padding: 0;
 }
 
 .sidebar ul li {
-    padding: 10px;
-    text-align: center;
+    margin-bottom: 15px;
 }
 
 .sidebar ul li a {
-    color: white;
-    text-decoration: none; /* Sin subrayado */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
     display: block;
+    transition: background-color 0.3s;
 }
 
 .sidebar ul li a:hover {
-    background-color: #575757; /* Cambio de color al pasar el ratón */
-    color: white;
+    background-color: #575a5c; /* Color de fondo al pasar el ratón */
+    border-radius: 4px; /* Esquinas redondeadas */
 }
 
-/* Estilos para el contenido */
+/* Contenido principal */
 .content {
-    margin-left: 250px; /* Mueve el contenido hacia la derecha para no superponerlo al sidebar */
+    margin-left: 250px; /* Margen para que no se superponga a la barra lateral */
     padding: 20px;
+    flex-grow: 1;
 }
 
-/* Estilos para el navbar superior */
 nav {
-    background-color: #333; /* Color de fondo del navbar superior */
-    overflow: hidden; /* Evita que los elementos se desborden */
-    position: relative; /* Permite que el contenido se superponga al sidebar */
-    z-index: 100; /* Asegura que esté encima del contenido */
+    margin-bottom: 20px; /* Espacio debajo de la navegación */
 }
 
 nav ul {
-    list-style-type: none; /* Sin viñetas */
-    padding: 0;
-    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; /* Alinea la navegación a la derecha */
 }
 
 nav ul li {
-    float: left; /* Alinea horizontalmente los elementos */
+    margin-left: 20px;
 }
 
 nav ul li a {
-    display: block; /* Hace que el enlace ocupe todo el espacio del elemento */
-    color: white; /* Color del texto */
-    text-align: center; /* Centra el texto */
-    padding: 14px 16px; /* Espaciado interno */
-    text-decoration: none; /* Sin subrayado */
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #575757; /* Cambio de color al pasar el ratón */
+    color: #ff9800; /* Cambia el color al pasar el ratón */
 }
 
-/* Contenedor del video */
-#videoContainer {
-    margin-top: 20px;
-    text-align: center; /* Centrar el video */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
 }
 
-/* Estilos para el cronómetro */
+/* Estilo para el contenedor del cronómetro */
 #timerContainer {
-    display: flex; /* Usar flexbox para centrar */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    margin: 20px 0; /* Espaciado superior e inferior */
-}
-
-#timer {
-    font-size: 48px; /* Tamaño de fuente más grande */
-    color: #333; /* Color del texto */
-    background-color: #f0f0f0; /* Color de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    background-color: #fff; /* Fondo blanco para el cronómetro */
     padding: 20px; /* Espaciado interno */
-    border: 2px solid #333; /* Bordes */
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
 }
 
-/* Contenedor de los botones */
+/* Estilo para el cronómetro en sí */
+#timer {
+    font-size: 8em; /* Tamaño grande para el texto */
+    color: #ff9800; /* Color principal para el cronómetro */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado del texto */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para dar efecto 3D */
+}
+
 #buttonContainer {
-    display: flex; /* Utiliza flexbox para centrar */
-    justify-content: center; /* Centra los botones horizontalmente */
-    margin: 20px 0; /* Espaciado superior e inferior */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
 }
 
-button {
-    font-size: 18px; /* Tamaño de la fuente de los botones */
-    padding: 10px 20px; /* Espaciado interno de los botones */
-    margin: 0 10px; /* Margen horizontal entre botones */
+/* Estilo para el botón del cronómetro */
+.btn {
+    padding: 15px 25px; /* Espaciado interno mayor */
+    background-color: #4caf50; /* Color verde para el botón */
+    color: #fff; /* Color de texto blanco */
     border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #4CAF50; /* Color de fondo del botón */
-    color: white; /* Color del texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1.5em; /* Tamaño del texto mayor */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s; /* Transición de color */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
 }
 
-button:hover {
-    background-color: #45a049; /* Color al pasar el ratón sobre el botón */
+.btn:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el ratón */
+}
+
+#videoContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative; /* Cambiar a relativo en pantallas pequeñas */
+        width: 100%; /* Ocupa el 100% del ancho */
+        height: auto; /* Ajusta la altura al contenido */
+    }
+
+    .content {
+        margin-left: 0; /* Sin margen en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #timer {
+        font-size: 2.5em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #timerContainer {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
 }
