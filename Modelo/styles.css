@@ -1,0 +1,119 @@
+/* Estilos para el navbar lateral */
+.sidebar {
+    height: 100%; /* Altura total de la página */
+    width: 250px; /* Ancho del sidebar */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Color de fondo */
+    padding-top: 20px;
+    z-index: 1000; /* Asegura que el sidebar esté encima del contenido */
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none; /* Sin subrayado */
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757; /* Cambio de color al pasar el ratón */
+    color: white;
+}
+
+/* Estilos para el contenido */
+.content {
+    margin-left: 250px; /* Mueve el contenido hacia la derecha para no superponerlo al sidebar */
+    padding: 20px;
+}
+
+/* Estilos para el navbar superior */
+nav {
+    background-color: #333; /* Color de fondo del navbar superior */
+    overflow: hidden; /* Evita que los elementos se desborden */
+    position: relative; /* Permite que el contenido se superponga al sidebar */
+    z-index: 100; /* Asegura que esté encima del contenido */
+}
+
+nav ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    float: left; /* Alinea horizontalmente los elementos */
+}
+
+nav ul li a {
+    display: block; /* Hace que el enlace ocupe todo el espacio del elemento */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 14px 16px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+}
+
+nav ul li a:hover {
+    background-color: #575757; /* Cambio de color al pasar el ratón */
+}
+
+/* Contenedor del video */
+#videoContainer {
+    margin-top: 20px;
+    text-align: center; /* Centrar el video */
+}
+
+/* Estilos para el cronómetro */
+#timerContainer {
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+#timer {
+    font-size: 48px; /* Tamaño de fuente más grande */
+    color: #333; /* Color del texto */
+    background-color: #f0f0f0; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border: 2px solid #333; /* Bordes */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Contenedor de los botones */
+#buttonContainer {
+    display: flex; /* Utiliza flexbox para centrar */
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+button {
+    font-size: 18px; /* Tamaño de la fuente de los botones */
+    padding: 10px 20px; /* Espaciado interno de los botones */
+    margin: 0 10px; /* Margen horizontal entre botones */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+button:hover {
+    background-color: #45a049; /* Color al pasar el ratón sobre el botón */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro Tabata</title>
+    <link rel="stylesheet" href="Modelo/styles.css">
+    <link rel="icon" href="data:,"> <!-- Evita el error de favicon 404 -->
+</head>
+<body>
+    <!-- Navbar lateral -->
+    <div class="sidebar">
+        <h2>Ejercicios</h2>
+        <ul>
+            <li><a href="#" id="pechoBtn">Pecho</a></li>
+            <li><a href="#" id="brazosBtn">Brazos</a></li>
+            <li><a href="#" id="abdomenBtn">Abdomen</a></li>
+            <li><a href="#" id="piernasBtn">Piernas</a></li>
+        </ul>
+    </div>
+
+    <div id="app" class="content">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Vista/settings.html">Configuración</a></li>
+            </ul>
+        </nav>
+        <h1>Cronómetro Tabata</h1>
+        
+        <!-- Contenedor del cronómetro -->
+        <div id="timerContainer">
+            <div id="timer">00:00</div>
+        </div>
+    
+        <!-- Contenedor para los botones -->
+        <div id="buttonContainer">
+            <button id="startBtn">Iniciar</button>
+            <button id="resetBtn">Reiniciar</button>
+        </div>
+        
+        <!-- Contenedor del video -->
+        <div id="videoContainer">
+            <video id="exerciseVideo" width="600" controls>
+                <source id="videoSource" src="Media/Video/brazos.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </div>
+
+    <script src="Controladores/Script.js"></script>
+</body>
+</html>
